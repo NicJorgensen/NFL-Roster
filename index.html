@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fantasy Football</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <header>NFL Fantasy League</header>
+                <h3>My Fantasy Team</h3>
+            </div>
+            <div class="col-sm-12">
+                <div class="row" id="my-team">
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-12 forms">
+
+                <form onsubmit="app.controllers.nflCtrl.searchName(event)">
+                    <input class="text" placeholder="Search by Name" name="name">
+                    <button type="submit">Search</button>
+                </form>
+                <form onsubmit="app.controllers.nflCtrl.searchPosition(event)">
+                    <input class="text" placeholder="Search by Position" name="position">
+                    <button type="submit">Search</button>
+                </form>
+                <form onsubmit="app.controllers.nflCtrl.searchTeam(event)">
+                    <input class="text" placeholder="Search by Team" name="team">
+                    <button type="submit">Search</button>
+                </form>
+
+            </div>
+
+            <div class="col-sm-12 player-roster text-center">
+                <h3>The Roster</h3>
+                <div class="row" id="roster">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="nfl-service.js"></script>
+    <script src="nfl-controller.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
